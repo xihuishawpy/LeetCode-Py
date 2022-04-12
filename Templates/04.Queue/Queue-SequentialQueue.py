@@ -18,18 +18,16 @@ class Queue:
     def enqueue(self, value):
         if self.is_full():
             raise Exception('Queue is full')
-        else:
-            self.rear += 1
-            self.queue[self.rear] = value
+        self.rear += 1
+        self.queue[self.rear] = value
             
     # 出队操作
     def dequeue(self):
         if self.is_empty():
             raise Exception('Queue is empty')
-        else:
-            self.queue[self.front] = None
-            self.front += 1
-            return self.queue[self.front]
+        self.queue[self.front] = None
+        self.front += 1
+        return self.queue[self.front]
         
     # 获取队头元素
     def front_value(self):

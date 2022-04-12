@@ -4,7 +4,7 @@ class Trie:
         """
         Initialize your data structure here.
         """
-        self.children = dict()
+        self.children = {}
         self.isEnd = False
 
 

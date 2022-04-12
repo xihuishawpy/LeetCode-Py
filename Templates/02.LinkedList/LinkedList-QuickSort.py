@@ -34,6 +34,4 @@ class Solution:
         
     
     def sortLinkedList(self, head: ListNode):
-        if not head or not head.next:
-            return head
-        return self.quickSort(head, None)
+        return head if not head or not head.next else self.quickSort(head, None)

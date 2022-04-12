@@ -19,17 +19,15 @@ class Stack:
     def push(self, value):
         if self.is_full():
             raise Exception('Stack is full')
-        else:
-            self.stack.append(value)
-            self.top += 1
+        self.stack.append(value)
+        self.top += 1
     
     # 出栈操作
     def pop(self):
         if self.is_empty():
             raise Exception('Stack is empty')
-        else:
-            self.top -= 1
-            self.stack.pop()
+        self.top -= 1
+        self.stack.pop()
     
     # 获取栈顶元素
     def peek(self):
@@ -46,7 +44,7 @@ S = Stack(10)
 for i in range(5):
     S.push(i)
 
-for i in range(3):
+for _ in range(3):
     S.pop()
-    
+
 print(S.peek())

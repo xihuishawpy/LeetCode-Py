@@ -10,7 +10,7 @@ class Stack:
     
     # 判断栈是否为空
     def is_empty(self):
-        return self.top == None
+        return self.top is None
     
     # 入栈操作
     def push(self, value):
@@ -22,10 +22,9 @@ class Stack:
     def pop(self):
         if self.is_empty():
             raise Exception('Stack is empty')
-        else:
-            cur = self.top
-            self.top = self.top.next
-            del cur
+        cur = self.top
+        self.top = self.top.next
+        del cur
     
     # 获取栈顶元素
     def peek(self):
@@ -39,8 +38,8 @@ stack = Stack()
 
 for i in range(5):
     stack.push(i)
-    
-for i in range(3):
+
+for _ in range(3):
     stack.pop()
-    
+
 print(stack.peek())

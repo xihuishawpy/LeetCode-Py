@@ -17,7 +17,7 @@ class Solution:
         if size < 2:
             return arr
         mid = len(arr) // 2
-        left_arr, right_arr = arr[0: mid], arr[mid:]
+        left_arr, right_arr = arr[:mid], arr[mid:]
         return self.merge(self.mergeSort(left_arr), self.mergeSort(right_arr))
 
     def sortArray(self, nums: List[int]) -> List[int]:

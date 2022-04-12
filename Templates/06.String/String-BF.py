@@ -9,12 +9,9 @@ def strStr(haystack: str, needle: str) -> int:
             i += 1
             j += 1
         else:
-            i = i - (j - 1)
+            i -= j - 1
             j = 0
 
-    if j == len2:
-        return i-j
-    else:
-        return -1
+    return i-j if j == len2 else -1
         
 print(strStr("abcdeabc", "bcd"))

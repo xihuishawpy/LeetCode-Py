@@ -1,7 +1,7 @@
 class UnionFind:
 
     def __init__(self, n):
-        self.parent = [i for i in range(n)]
+        self.parent = list(range(n))
 
     def find(self, x):
         while x != self.parent[x]:

@@ -1,15 +1,15 @@
 import random
 
 def monotoneStack(nums):
-	print(str(nums))
+	print(nums)
 	stack = []
 	for num in nums:
 		while stack and num <= stack[-1]:
 			top = stack[-1]
 			stack.pop()
-			print(str(top) + " 出栈 " + str(stack))
+			print(f"{str(top)} 出栈 {stack}")
 		stack.append(num)
-		print(str(num) + " 入栈 " + str(stack))
+		print(f"{str(num)} 入栈 {stack}")
 		
 def monotoneIncreasingStack(nums):
 	stack = []
@@ -17,9 +17,9 @@ def monotoneIncreasingStack(nums):
 		while stack and num >= stack[-1]:
 			top = stack[-1]
 			stack.pop()
-			print(str(top) + " 出栈 " + str(stack))
+			print(f"{str(top)} 出栈 {stack}")
 		stack.append(num)
-		print(str(num) + " 入栈 " + str(stack))
+		print(f"{str(num)} 入栈 {stack}")
 		
 def monotoneDecreasingStack(nums):
 	stack = []
@@ -27,14 +27,12 @@ def monotoneDecreasingStack(nums):
 		while stack and num <= stack[-1]:
 			top = stack[-1]
 			stack.pop()
-			print(str(top) + " 出栈 " + str(stack))
+			print(f"{str(top)} 出栈 {stack}")
 		stack.append(num)
-		print(str(num) + " 入栈 " + str(stack))
+		print(f"{str(num)} 入栈 {stack}")
 		
 
-nums = []
-for i in range(8):
-	nums.append(random.randint(1, 9))
+nums = [random.randint(1, 9) for _ in range(8)]
 print(nums)
 #nums = [4, 3, 2, 5, 7, 4, 6, 8]
 monotoneIncreasingStack(nums)
